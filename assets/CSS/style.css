@@ -73,6 +73,7 @@ flip card
     margin: 1px;
     display: flex;
     padding: 3px;
+    font-style: italic;
     /* margin-bottom: 3px;
     display: flex;
     text-align: center;

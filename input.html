@@ -11,40 +11,91 @@
     <script type="text/javascript" src="assets/JS/cards.js"></script>
 </head>
 
+<body>
 <!-- Jumbotron -->
 <div class="jumbotron">
     <h1 class="text-center">Card Update Form</h1>
-  </div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark w-100" id="masthead">
+        <a class="navbar-brand" href="#" id="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                 <a class="nav-link" href="index.html">Back to Home Page <span class="sr-only">(current)</span></a>
+              </li>
+           </ul>
+        </div>
+     </nav>
+
+
 
   <div class="row">
 
     <div class="col-lg-6">
       <div class="card card-default">
-        <div class="card-header">
-         
-        </div>
+        <div class="card-header"></div>
         <div class="card-body">
+
 
           <!-- Sign-up Form-->
           <form role="form">
             <div class="form-group row">
-              <label for="name-input">Front Card Title</label>
-              <input class="form-control" id="name-input" type="text">
+              <label for="title-input">Front Card Title</label>
+              <input class="form-control" id="title-input" type="text">
             </div>
             <div class="form-group row">
-              <label for="email-input">Back Cark Item #1</label>
-              <input class="form-control" id="email-input" type="email">
+              <label for="concern-input">Back Cark Item #1</label>
+              <input class="form-control" id="concern-input" type="email">
             </div>
             <div class="form-group row">
-              <label for="age-input">Back Cark Item #2</label>
-              <input class="form-control" id="age-input" type="number">
+              <label for="prayer-input">Back Cark Item #2</label>
+              <input class="form-control" id="prayer-input" type="number">
             </div>
             <div class="form-group row">
               <label for="comment-input">Back Cark Item #3</label>
               <textarea class="form-control" id="comment-input" rows="5"></textarea>
             </div>
-            <button class="btn btn-default" id="add-user" type="submit">Submit to update cards</button>
+            <button class="btn btn-default" id="add-user" type="submit">Submit</button>
           </form>
         </div>
       </div>
     </div>
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Script -->
+  <script>
+    // Capture Button Click
+    $("#add-user").on("click", function(event) {
+      // prevent form from trying to submit/refresh the page
+      event.preventDefault();
+
+      // Capture User Inputs and store them into variables
+      var title = $("#title-input").val().trim();
+      var concern = $("#concern-one-input").val().trim();
+      var prayer = $("#prayer-input").val().trim();
+      var comment = $("#comment-input").val().trim();
+
+
+      // Output all of the new information into the relevant HTML sections
+      $("#title-display").text(title);
+      $("#concern-display").text(concern);
+      $("#prayer-display").text(prayer);
+      $("#comment-display").text(comment);
+
+    });
+
+  </script>
+
+</body>
+
+</html>

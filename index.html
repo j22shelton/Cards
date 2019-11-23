@@ -39,8 +39,11 @@
                     <div class="card-front text-white bg-dark">
                         <div class="card-body">
                             <i class="fa fa-search fa-5x float-right"></i>
-                            <!-- <h3 class="card-title"></h3> -->
-                            <p class="card-text">TBD</p>
+                       
+                                      <div class="card-body" id="recent-member">
+                                        <h2 id="title-display"></h2>
+                                      </div>
+                                
                         </div>
                     </div>
                     <div class="card-back bg-white">
@@ -60,6 +63,7 @@
                     <div class="card-front text-white bg-dark">
                         <div class="card-body">
                             <i class="fa fa-search-plus fa-5x float-right"></i>
+
                             <!-- <h3 class="card-title"></h3> -->
                             <p class="card-text">TBD</p>
                         </div>
@@ -138,9 +142,32 @@
     </div>
 </div>
 
+<!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
 
-   <!-- Script -->
-   <script type="text/javascript" src="assets/JS/cards.js"></script>
+  <!-- Script -->
+  <script>
+    // Capture Button Click
+    $("#add-user").on("click", function(event) {
+      // prevent form from trying to submit/refresh the page
+      event.preventDefault();
+
+      // Capture User Inputs and store them into variables
+      var title = $("#title-input").val().trim();
+      var concern = $("#concern-one-input").val().trim();
+      var prayer = $("#prayer-input").val().trim();
+      var comment = $("#comment-input").val().trim();
+
+
+      // Output all of the new information into the relevant HTML sections
+      $("#title-display").text(title);
+      $("#concern-display").text(concern);
+      $("#prayer-display").text(prayer);
+      $("#comment-display").text(comment);
+
+    });
+
+  </script>
 
 </body>
 
