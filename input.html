@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prayer Cards</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/CSS/style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/JS/cards.js"></script>
+</head>
+
+<!-- Jumbotron -->
+<div class="jumbotron">
+    <h1 class="text-center">Card Update Form</h1>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-6">
+      <div class="card card-default">
+        <div class="card-header">
+         
+        </div>
+        <div class="card-body">
+
+          <!-- Sign-up Form-->
+          <form role="form">
+            <div class="form-group row">
+              <label for="name-input">Front Card Title</label>
+              <input class="form-control" id="name-input" type="text">
+            </div>
+            <div class="form-group row">
+              <label for="email-input">Back Cark Item #1</label>
+              <input class="form-control" id="email-input" type="email">
+            </div>
+            <div class="form-group row">
+              <label for="age-input">Back Cark Item #2</label>
+              <input class="form-control" id="age-input" type="number">
+            </div>
+            <div class="form-group row">
+              <label for="comment-input">Back Cark Item #3</label>
+              <textarea class="form-control" id="comment-input" rows="5"></textarea>
+            </div>
+            <button class="btn btn-default" id="add-user" type="submit">Submit to update cards</button>
+          </form>
+        </div>
+      </div>
+    </div>
