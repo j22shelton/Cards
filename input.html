@@ -48,21 +48,21 @@
           <form role="form">
             <div class="form-group row">
               <label for="title-input">Front Card Title</label>
-              <input class="form-control" id="title-input" type="text">
+              <input class="form-control" id="title-input" type="title">
             </div>
             <div class="form-group row">
               <label for="concern-input">Back Cark Item #1</label>
-              <input class="form-control" id="concern-input" type="email">
+              <input class="form-control" id="concern-input" type="concern">
             </div>
             <div class="form-group row">
               <label for="prayer-input">Back Cark Item #2</label>
-              <input class="form-control" id="prayer-input" type="number">
+              <input class="form-control" id="prayer-input" type="prayer">
             </div>
             <div class="form-group row">
               <label for="comment-input">Back Cark Item #3</label>
-              <textarea class="form-control" id="comment-input" rows="5"></textarea>
+              <textarea class="form-control" id="comment-input" rows="3"></textarea>
             </div>
-            <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+            <button class="btn btn-default" id="add-info" type="submit">Submit</button>
           </form>
         </div>
       </div>
@@ -75,13 +75,13 @@
   <!-- Script -->
   <script>
     // Capture Button Click
-    $("#add-user").on("click", function(event) {
+    $("#add-info").on("click", function(event) {
       // prevent form from trying to submit/refresh the page
       event.preventDefault();
 
       // Capture User Inputs and store them into variables
       var title = $("#title-input").val().trim();
-      var concern = $("#concern-one-input").val().trim();
+      var concern = $("#concern-input").val().trim();
       var prayer = $("#prayer-input").val().trim();
       var comment = $("#comment-input").val().trim();
 
@@ -91,6 +91,10 @@
       $("#concern-display").text(concern);
       $("#prayer-display").text(prayer);
       $("#comment-display").text(comment);
+
+      console.log(title);
+      console.log(concern);
+   
 
     });
 
